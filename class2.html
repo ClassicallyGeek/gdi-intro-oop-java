@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>GDI Introduction to Java and OOP Concepts</title>
+
+	<meta name="description" content="This is the official Girl Develop It Intermediate Core HTML/CSS curriculum. It was developed through the contributions of Julie Pagano, Jen Myers, Alexis Goldstein and Izzy Johnston.   The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+	<meta name="author" content="Girl Develop It">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+	<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+	<!-- For the slides -->
+	<link rel="stylesheet" href="css/slides.css">
+	<!-- If use the PDF print sheet so students can print slides-->
+
+	<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<!-- Opening slide -->
+			<section>
+				<img src="images/gdi_logo_badge.png" alt="" />
+				<h3>Intro to Java and OOP Concepts</h3>
+				<h4>Class 1</h4>
+			</section>
+
+			<!-- Welcome-->
+			<section>
+				<h3>Welcome!</h3>
+				<div class="left-align">
+					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+					<p class="green">Some "rules"</p>
+					<ul>
+						<li>We are here for you!</li>
+						<li>Every question is important</li>
+						<li>Help each other</li>
+						<li>Have fun</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h3>Review</h3>
+			</section>
+			<section>
+				<h3>Agenda</h3>
+				<ul>
+					<li>Objects and Classes</li>
+					<li>Defining Fields and Methods</li>
+					<li>Data Encapsulation</li>
+					<li>Subclasses and Inheritance</li>
+					<li>Polymorphism</li>
+					<li>Abstraction</li>
+					<li>Interfaces</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Featured Object</h3>
+				<p>MotorVehicles which are types of Vehicles and include cars and buses</p>
+			</section>
+			<section>
+				<p>Describe a Motor Vehicle's states and behaviors</p>
+			</section>
+			<section>
+				<section>
+					<h3>Classes</h3>
+					<p>A Class is a blueprint of an Object</p>
+					<p>It tells us how to build an instance of an Object.</p>
+					<p>From one blueprint we can create many instances of a single Object</p>
+				</section>
+				<section>
+					<h3>Class Declarations</h3>
+					<p>When defining a class you must include: </p>
+					<pre><code>
+class ClassName {
+	...
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>Create a new class</h3>
+					<ol>
+						<li>File > New > Class</li>
+						<li>Class Name: MotorVehicle</li>
+						<li>Modifiers: Default</li>
+					</ol>
+				</section>
+				<section>
+					<h3>The Code</h3>
+					<pre><code>
+public class MotorVehicle {
+}
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Data Members</h3>
+					<p>An Object has one or more data members that describe its state.</p>
+				</section>
+				<section>
+					<h3>Defining Data Members</h3>
+					<pre><code>
+boolean engineOn;
+int currentSpeed;
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Defining a Constructor</h3>
+					<p>When you create an Object, you should include at least one constructor.  If you do not, the compiler automatically provides a default one.</p>
+					<p>A constructor is a special method that is invoked when you create a new instrance of your object</p>
+					<p>It is common to set default values for your data members in the constructor</p>
+				</section>
+				<section>
+					<h3>Code It!</h3>
+					<pre><code>
+	public MotorVehicle() {
+		currentSpeed = 0;
+		engineOn = false;
+	}
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Defining Methods</h3>
+				<p>Method represent the behavior of the Objects.</p>
+				<p>A method signature includes the method's name plus the number and type of paramters</p>
+			</section>
+			<section>
+				<h3>MotorVehicle Methods</h3>
+				<pre><code>
+public void accelerate();
+public void decelerate();
+				</code></pre>
+			</section>
+			<section>
+				<h3>Code It!  (Adding Methods</h3>
+				<p>Let's add an accelerated method to our MotorVehicle class: </p>
+				<pre><code>
+public void accelerate() {
+	currentSpeed = currentSpeed + 5;
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Individually</h3>
+				<p>Add a decelerate method that slows the motor vehicle down in increments of 5.</p>
+				<p>Add a method that will swtich the engine's state</p>
+				<p><em>If</em> the engine is on turn the engine off</p>
+				<p><em>else</em> the engine is off so turn the engine on</p>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code>
+public void decelerate() {
+	currentSpeed = currentSpeed - 5;
+}
+
+public void switchEngineState() {
+	if (engineOn == true) {
+		engineOn = false;
+	}
+	else {
+		engineOn = true;
+	}
+}
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<p>You build an Object from a class</p>
+				<p>Objects are instances of your classes</p>
+			</section>
+			<section>
+				<h3>Objects - Creating </h3>
+				<p>To create an object:</p>
+				<pre><code>
+ObjectType nameOfInstance = new ObjectType();
+				</code></pre>
+				<p>where ObjectType() is the Object's constructor.  If the constructor expects parameters you would include them in this statement: </p>
+				<pre><code>
+nameOfInstance = new ObjectType(String ex);
+				</code></pre>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<p>Create a MotorVehicle Object</p>
+				<p>In the main method of the HelloWorld class, add the following line: </p>
+				<pre><code>
+MotorVehicle myVehicle = new MotorVehicle();
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Using Objects</h3>
+				<p>Once you have created your object, you can call its different methods with the following format: </p>
+				<pre><code>
+nameOfInstance.methodName();
+				</code></pre>
+				<p>Similarly, you can access data members in this format: </p>
+				<pre><code>
+nameOfInstance.datamember;
+				</code></pre>
+			</section>
+			<section>
+				<h3>Code It!</code>
+				<p>Now use a method of your motor vehicle class: </p>
+				<ol>
+					<li>call switchEngineState to turn on the car</li>
+					<li>Print engineOn and confirm it's true</li>
+					<li>Print the currentSpeed</li>
+					<li>Accelerate the vehicle</li>
+					<li>Print the new currentSpeed</li>
+					<li>Decelerate the vehicle</li>
+					<li>Print the new currentSpeed</li>
+				</ol>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code>
+MotorVehicle myVehicle = new MotorVehicle();
+myVehicle.switchEngineState();
+System.out.println("Current Speed: " + myVehicle.currentSpeed);
+myVehicle.accelerate();
+System.out.println("Current Speed: " + myVehicle.currentSpeed);
+myVehicle.decelerate();
+System.out.println("Current Speed: " + myVehicle.currentSpeed);
+				</code></pre>
+				<p>Output:</p>
+				<pre><code>
+Current Speed: 0
+Current Speed: 5
+Current Speed: 0
+				</code></pre>
+			</section>
+			<section>
+				<h3>Individually</h3>
+				<p>Create a method called printDescription that will print the following statement:</p>
+				<pre><code>
+I'm a MotorVehicle and my engine is on (true/false) and I'm currently going (#)mph.
+				</code></pre>
+				<p>Test it by calling myVehicle.printDescription();</p>
+			</section>
+		</section>
+		<section>
+			<h3>Checkpoint</h3>
+			<p>Building basic Objects</p>
+			<ul>
+				<li>Methods</li>
+				<li>Data Members</li>
+				<li>Instances</li>
+			</ul>
+		</section>
+		<section>
+			<section>
+				<h3>Data Members - Access Modifiers</h3>
+				<p>We can make these data members public or private</p>
+				<p>Public members can be accessed by all other classes</p>
+				<p>Private memembers can only be accessed within its own class</p>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<p>Mark your data members public and private</p>
+				<pre><code>
+public boolean engineOn;
+private int currentSpeed;
+				</code></pre>
+			</section>
+			<section>
+				<h3>Accessing Data Members</h3>
+				<p>If your fields are declared with the <em>public</em> access modifier you can access the data members directly with the format mentioned before: </p>
+				<pre><code>
+instanceOfObject.fieldName
+				</code></pre>
+			</section>
+			<section>
+				<h3>Oops!</h3>
+				<p>What is the error we received?</p>
+				<p>Why did we receive it?</p>
+				<p>Why is myVehicle.engineOn not throwing the same error?</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Data Encapsulation</h3>
+				<p>With OOP, we have the concept of data encapsulation which discourages the direct, public access to a class's data members.</p>
+			</section>
+			<section>
+				<h3>Data Encapsulation</h3>
+				<p>Data Encapsulation is to hide or restrict direct access to an object's members</p>
+				<p>Instead of direct access a set of accessor and modifier methods are used to interact with the data.</p>
+			</section>
+			<section>
+				<h3>Benefits</h3>
+				<ol>
+					<li>Control to make fields read-only and write-only</li>
+					<li>Classes can have absolute control over what is stored in the field</li>
+					<li>Provides a layer of abstraction.  Users of the class (other code or objects) do not need to know the details of the data storage</p>
+				</ol>
+			</section>
+			<section>
+				<h3>Encapsulating our Data</h3>
+				<p>Let's make all our data members private</p>
+				<p>Now we'll need to add accessor methods so we can still access the data</p>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<p>Add an accessor method to get the current speed: </p>
+				<pre><code>
+int getCurrentSpeed() {
+	return currentSpeed;
+}
+				</code></pre>
+				<p>Individually, add an accessor method for the boolean engineOn</p>
+			</section>
+			<section>
+				<pre><code>
+public boolean getEngineOn() {
+	return engineOn;
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Update our Code</h3>
+				<p>Now instead of calling on your data members directly, use the accessor methods we just created to get their values.</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Static vs Instance</h3>
+				<p>When a method is declared static, it is <strong>shared</strong> by all instances of the class.</p>
+				<p>In contrast, the type of methods we've been using have been <strong>unique</strong>to each instance.</p>
+			</section>
+			<section>
+				<h3>Illustrated</h3>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Static: An Example</h3>
+				<p>How many cars on the raod?</p>
+				<p>Create a static data member to keep count of the MotorVehicles we've created: </p>
+				<pre><code>
+private static int countCreated;
+				</code></pre>
+				<p>Each time a MotorVehicle is created we want to increment the count.</p>
+				<p>Where would we put the code to do so?</p>
+			</section>
+			<section>
+				<h3>Code It</h3>
+				<pre><code>
+public MotorVehicle() {
+	currentSpeed = 0;
+	engineOn = false;
+	countCreated++;
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Add an Accessor</h3>
+				<p>We can create a regular accessor method to return the countCreated.</p>
+				<pre><code>
+public int getCountCreated() {
+	return countCreated;
+}
+				</code></pre>
+				<p>Individually, print the countCreated</p>
+			</section>
+			<section>
+				<h3>Testing our Static Data Member</h3>
+				<ol>
+					<li>Create a second MotorVehicle myVehicle2</li>
+					<li>Print the result of myVehicle.getCount()</li>
+					<li>Print the result of myVehicle.getCount()</li>
+				</ol>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Static Method</h3>
+				<p>Since the countCreated is not specific to the instance, we might want to make a method that is not specific to the instance when accessing the data.</p>
+				<p>We can create static methods that (like a static data member) is shared by all instance.</p>
+			</section>
+			<section>
+				<h3>Code It</h3>
+				<p>Add the static keyword to your method declaration: </p>
+				<pre><code>
+public static int getCountCreated() {
+	return countCreated;
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Accessing the static method</h3>
+				<p>You can access a static method the same way you access an instance method, but it is discouraged since it doesn't clearly indicate you accessing a class method.</p>
+				<p>Instead, we will update our code to use this format: </p>
+				<pre><code>
+ClassName.staticMethodName();
+				</code></pre>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code>
+System.out.println("Number of Vehicles: " + MotorVehicles.getCountCreated());
+MotorVehicle myVehicle2 = new MotorVehicle();
+System.out.println("Number of Vehicles: " + MotorVehicles.getCountCreated());
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<h3>Checkpoint</h3>
+			<ul>
+				<li>Data Encapsulation</li>
+				<li>Static vs Instance</li>
+			</ul>
+		</section>
+		<section>
+			<section>
+				<h3>Inheritance and Subclasses</h3>
+				<p>A class can be derived from another class</p>
+				<p>A class that is derived from another class is called a <em>subclass</em></p>
+				<p>Subclasses inherit fields and methods from their parent class</p>
+			</section>
+			<section>
+				<h3>Why would you want it?  Inheritance</h3>
+				<p>New class is created from an existing class</p>
+				<p>Reuse code</p>
+				<p>Can be used to create a hierarchical class structure</p>
+			</section>
+			<section>
+				<h3>MotorVehicle -> Car</h3>
+				<p>Let's create a car</p>
+				<p>File > New > Class</p>
+				<p>Name: Car</p>
+				<p>Add the extends keyword and the name of the parent class (MotorVehicle)</p>
+				<pre><code>
+public class Car extends MotorVehicle {
+	...
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>What you can do with a Subclass</h3>
+				<p>You can write a subclass constructor that invokes constructor of the superclass</p>
+				<p>You can declare new fields in subclass that aren't in the parent class</p>
+				<p>Inherited fields can be used directly</p>
+				<p>A subclass can't inherit private members</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Super</h3>
+				<p>The Super keyword can be used in a child to call a method or member of the parent class</p>
+				<p>The syntax is super.methodName() or super.memberName;</p>
+				<p>If you want to call the constructor of the super class you simply use the syntax: </p>
+				<pre><code>
+super();
+				</code></pre>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<p>Create a car constructor that calls super()</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>What else can you do with a subclass?</h3>
+				<p>You can declare new fields in subclass that aren't in the parent class.</p>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<ol>
+					<li>Add a boolean called trunkOpen</li>
+					<li>Add an int called numDoors</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Augment the constructor</h3>
+				<p>Our constructor should also be initialize the subclass-only data members</p>
+				<p>Initialize trunkOpen to false and numDoors to 4</p>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code>
+public class Car extends MotorVehicle {
+	private boolean trunkOpen;
+	private int numDoors;
+	public Car() {
+		super();
+		trunkOpen = false;
+		numDoors = 4;
+	}
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Test it Out</h3>
+				<p>In your HelloWorld class:</p>
+				<ol>
+					<li>Create a car "myCar"</li>
+					<li>Print the car's current speed</li>
+					<li>Accelerate the car</li>
+					<li>Print the car's new current speed</li>
+					<li>Call printDescription</li>
+					<li>Print the count of MotorVehicles on the road</li>
+				</ol>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code>
+Car myCar = new Car();
+System.out.println(myCar.getCurrentSpeed());
+myCar.accelerate();
+System.out.println(myCar.getCurrentSpeed());
+myCar.printDescription();
+System.out.println("Number of Vehicles on the road: " + MotorVehicle.getCountCreated());
+				</code></pre>
+				<p>Output:</p>
+				<pre><code>
+0
+5
+I'm a Motor Vehicle and my Engine is on false and I'm going 5 mph
+Number of Vehicles on the road: 3
+				</code></pre>
+			</section>
+			<section>
+				<h3>Individually</h3>
+				<p>Add accessor methods for:</p>
+				<ol>
+					<li>trunkOpen</li>
+					<li>numDoors</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Code</h3>
+				<pre><code>
+public boolean getTrunkOpen() {
+	return trunkOpen;
+}
+
+public int getNumDoors() {
+	return numDoors;
+}
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Overriding Methods</h3>
+				<p>Instance Methods:</p>
+				<p>An instance method in a subclass (child class) that has the same signature and return type as an instance method in the superclass <em>overrides</em> the superclass's method.</p>
+			</section>
+			<section>
+				<h3>Code It</h3>
+				<p>Create a printDescription() method for your car class that says:</p>
+				<p>I'm a car!  I have (#) doors!</p>
+			</section>
+			<section>
+				<h3>Overriding Methods Cont.</h3>
+				<p>The output of myCar.printDescription() now says: </p>
+				<pre><code>
+I'm a car!  I have 4 doors!
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Final Methods</h3>
+				<p>A Final method cannot be overridden in a subclass</p>
+			</section>
+			<section>
+				<p>What method inside MotorVehicle cannot be overridden?</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>A moment to ponder</h3>
+				<p>Right now we can accelerate and decelrate our car by the default value of "5"</p>
+				<p>What if we wanted to really slam on the pedal and take a 10 mp jump? Or 20??</p>
+				<p>We can create another accelerate/decelerate method that will take a parameter specifying how much faster or slower we want to go</p>
+			</section>
+			<section>
+				<h3>Method Overloading</h3>
+				<p>Doing so is called <em>Method Overloading</em></p>
+				<pre><code>
+public void accelerate(int amount) {
+	currentSpeed = currentSpeed + amount;
+}
+				</code></pre>
+				<p>Overloading is summed up by: Same name and different parameter list</p>
+			</section>
+			<section>
+				<h3>An Error?</h3>
+				<p><em>The field MotorVehicle.currentSpeed is not visible</em></p>
+				<p>We've seen something like this before...it has to do with those access modifiers</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Fields</h3>
+				<p>Inherited Fields</p>
+				<p>A subclass can't access a parent's private members</p>
+				<p>There is a third access modifier called Protected</p>
+				<p>Protected fields can be accessed by subclasses</p>
+			</section>
+			<section>
+				<h3>Quick Detour</h3>
+				<p>Hop back to the MotorVehicle class and update your private member "currentSpeed" to protected.</p>
+				<p>Now that the error has gone, thest out your new method: </p>
+				<pre><code>
+myCar.accelerate(10);
+System.out.println(myCar.getCurrentSpeed());
+				</code></pre>
+			</section>
+			<section>
+				<h3>Individually</h3>
+				<p>Overload the decelerate method in the same fashion</p>
+			</section>
+		</section>
+		<section>
+			<h3>Polymorphism</h3>
+			<p>Assuming a subclass has overloaded a method in the parent class:</p>
+			<p><em>"When an application needs the function, the particular version is dynamically determined at runtime"</em> - William Ford, William Topp Data Structures with C++ using STL</p>
+		</section>
+		<section>
+			<section>
+				<h3>Abstraction</h3>
+				<p>Using the <em>abstract</em> keyword when developing a class indicates that the class will never be instantiated</p>
+				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) couldk be instantiated</p>
+			</section>
+			<section>
+				<h3>Building an Abstract Class</h3>
+				<p>Abstract classes can contain partial implementations</p>
+				<p>Will you ever have just a <em>MotorVehicle</em> on the road?</p>
+			</section>
+			<section>
+				<h3>Code It!</h3>
+				<p>Convert our MotorVehicle class to an Abstract Class</p>
+				<p>Add the <em>abstract</em> keyword to the class declaration:</p>
+				<pre><code>
+public abstract class MotorVehicle { ... }
+				</code></pre>
+			</section>
+			<section>
+				<h3>Updating our Tests</h3>
+				<p>Now that MotorVehicle is an abstract class, we can't create an instance of it</p>
+				<p>We have two choices:</p>
+				<ol>
+					<li>Comment out the code</li>
+					<li>Update the code to create instances of Cars</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Updating Cont.</h3>
+				<p>Since car extends MotorVehicle we can:</p>
+				<pre><code>
+MotorVehicle myVehicle = new Car();
+MotorVehicle myVehicle2 = new Car();
+				</code></pre>
+				<p>Why would you want to do this?</p>
+			</section>
+		</section>
+		<section>
+			<h3>Hiding Methods</h3>
+			<p>Class Methods:</p>
+			<p>If a subclass defines a class method with the same signature as a class method in the superclass, the method in the subclass hides the one in the superclass</p>
+		</section>
+		<section>
+			<h3>Code It!</h3>
+			<p>On your own, create a Bus that extends MotorVehicle</p>
+			<p>Additional Bus specific Methods to include: </p>
+			<ol>
+				<li>pickUpPassengers(int numer)</li>
+				<li>dropOffPassengers()</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Interfaces</h3>
+			<p>If an abstract class only contains abstract method declarations, it is an interface</p>
+			<p>An <em>interface</em> tells people how to interact with an object</p>
+			<p>What are the methods?  What are the parameters do they need and what do they return?</p>
+		</section>
+		<section>
+			<h3>Where to go from here?</h3>
+		</section>
+	</div> <!-- end slides -->
+	</div> <!-- end reveal -->
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+
+	</script>
+</body>
+</html>
