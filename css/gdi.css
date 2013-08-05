@@ -1,0 +1,35 @@
+.reveal pre code {
+	padding-left: 1em;
+}
+
+.reveal table {
+	margin: 0 auto;
+}
+
+.reveal table td {
+	padding-right: 1em;
+}
+
+.reveal h3 {
+	margin-bottom: 1em;
+}
+
+.reveal section img {
+	border: 0;
+}
+
+.reveal p {
+	margin: 1em 0;
+}
+
+.reveal li {
+	margin-bottom: .25em;
+}
+
+/****************
+ * Pretty Styling
+ * ***************/
+
+.individually {
+	color: #F05B62;
+}
