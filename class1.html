@@ -357,7 +357,7 @@ maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 						numberPassengers=1;<br>
 						maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!<br>
 						<strong>numberPassengers=numberPassengers+1;<br>
-							System.out.println("Number of Passengers: "+numberPassengers);</strong><br>
+							System.out.println("Number of Passengers: " + numberPassengers);</strong><br>
 					</aside>
 					<h3>Code it!</h3>
 					<p class='individually'>On your own: </p>
@@ -365,7 +365,7 @@ maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 						<li>Increment the numberPassengers value by one</li>
 						<li>Then use the System.out.println method to show the result:
 							<pre><code class='java'>
-System.out.println("Number of Passengers: "+numberPassengers);
+System.out.println("Number of Passengers: " + numberPassengers);
 							</code></pre>
 						</li>
 					</ul>
@@ -405,7 +405,7 @@ Number of Passengers: 2
 						<li>Initialize it with the value 0</li>
 						<li>Increase the value by 20 mph</li>
 						<li>Print the new current speed</li>
-						<li>Now reduce yoru speed in half</li>
+						<li>Now reduce your speed in half</li>
 						<li>Print the new current speed</li>
 						<li>Increase your speed times three</li>
 						<li>Print the new current speed</li>
@@ -449,13 +449,13 @@ System.out.println("Current Speed: "+currentSpeed);
 							<td>&lt;</td><td>Less than</td>
 						</tr>
 						<tr>
-							<td></td><td>Greater than</td>
+							<td>></td><td>Greater than</td>
 						</tr>
 						<tr>
 							<td>&lt;=</td><td>Less than or Equal to</td>
 						</tr>
 						<tr>
-							<td>=</td><td>Greater than or Equal to</td>
+							<td>>=</td><td>Greater than or Equal to</td>
 						</tr>
 					</table>
 				</section>
@@ -483,9 +483,9 @@ The car is full: false
 					</aside>
 					<h3>Code It - <span class='individually'>Individually</span></h3>
 					<ol>
-						<li>True or False? The numberPassengers is less than maxNumberPassengers</li>
+						<li>In a boolean "hasSpace," assign the resulting value of the question "numberPassengers is less than maxNumberPassengers?"</li>
 						<li>Print the result</li>
-						<li>True or False? The numberPassengers is greater than or equal to maxNumberPassengers</li>
+						<li>Test if the numberPassengers is greater than or equal to maxNumberPassengers and store it in isFull</li>
 						<li>Print the result</li>
 					</ol>
 				</section>
@@ -686,7 +686,8 @@ if (numberPassengers &lt; maxNumberPassengers) {
 			<section>
 				<section>
 					<h3>Switch Statement</h3>
-					<p>A switch statement evaluates the value of an integer or String and executes all the statement following the matching "case" block.</p>
+					<p>A switch statement evaluates the value of an integer or String and executes all the statements following the matching "case" block.</p>
+					<p>In other words, it evaluates the conditional once and starts execution from there until it is told to stop or hits the end of the block</p>
 				</section>
 				<section>
 					<h3>Switch Statement Example</h3>
@@ -695,7 +696,7 @@ switch (holiday) {
 	case "new years":
 		System.out.println("Happy New Year!");
 		break;
-	case "foruth of july":
+	case "fourth of july":
 		System.out.println("Happy Independence Day");
 		break;
 	default:
@@ -736,7 +737,7 @@ switch (holiday) {
 						so everthing (including) after "They always call shotgun" prints
 					</aside>
 					<h3>Wait a Minute! Take a break</h3>
-					<p>Without any break" statements the switch blocks "falls through" and executes everything after the matching value too!</p>
+					<p>Without any break statements the switch blocks "falls through" and executes everything after the matching value too!</p>
 				</section>
 				<section>
 					<h3>Code it!</h3>
@@ -838,10 +839,10 @@ while (condition) {
 				<section>
 					<aside class='notes'>
 						isFull = numberPassengers == maxNumberPassengers;<br>
-						while(!isFull){<br>
+						while(hasSpace){<br>
 						numberPassengers++;<br>
 						System.out.println("I'm Carrying: "+numberPassengers);<br>
-						isFull = numberPassengers == maxNumberPassengers;<br>
+						hasSpace = numberPassengers &lt; maxNumberPassengers;<br>
 						}<br>
 						<br>
 						<strong>Output:</strong> <br>
@@ -850,7 +851,7 @@ while (condition) {
 						I'm Carrying: 5
 					</aside>
 					<h3>Code It!</h3>
-					<p>While isFull is NOT true, add a passengers then update the value of isFull</p>
+					<p>While hasSpace is true, add a passengers then update the value of hasSpace</p>
 				</section>
 				<section>
 					<h3>The Code</h3>
@@ -935,7 +936,7 @@ for (int i=0; i&lt;garage.length; i++) {
 				<h3>String Object</h3>
 				<p>We created an Array of Strings</p>
 				<p><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html">Strings</a> are a type of Object</p>
-				<p>We can create a signel string object by declaring a variable of type String and assigning it a new String object with some value</p>
+				<p>We can create a single String object by declaring a variable of type String and assigning it a new String object with some value</p>
 				<pre><code class='java'>
 String dreamCar = new String("Corvette");
 				</code></pre>

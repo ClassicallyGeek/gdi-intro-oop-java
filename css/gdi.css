@@ -48,7 +48,7 @@
 	background-image: url(../images/watermark-logo-2.png);
 	background-repeat: no-repeat;
 	background-size: auto 100%;
- transition: background-image .35s ease-in-out;
+ transition: background-image .45s ease-in-out;
  -moz-transition: background-image .35s ease-in-out;
  -webkit-transition: background-image .25s ease-in-out;
 }
