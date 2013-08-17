@@ -112,6 +112,12 @@ public class HelloWorld {
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						public static void main(String[] args) {<br>
+							// TODO Auto-generated method stub<br>
+							<strong>System.out.println("Hello, World!");</strong><br>
+						}
+					</aside>
 					<h3>Writing our first line </h3>
 					<ol>
 						<li>Inside the main method type: 
@@ -187,6 +193,9 @@ public class HelloWorld {
 					<img src="images/variable_illustration.jpg">
 				</section>
 				<section>
+					<aside class='notes'>
+						There are 8 total, but these are three we care about at the moment
+					</aside>
 					<h3>Primitive Variables</h3>
 					<p>A primitive variable is the most basic type of value in a language.</p>
 					<p>Primitive types we'll be looking at include: </p>
@@ -197,6 +206,17 @@ public class HelloWorld {
 					</ul>
 				</section>
 				<section>
+					<aside class='notes'>
+						public static void main(String[] args) {<br>
+							// TODO Auto-generated method stub<br>
+							System.out.println("Hello World");<br>
+							<strong>
+								int numberPassengers;<br>
+								int maxNumberPassengers;<br>
+								boolean isFull;<br>
+							</strong>
+						}
+					</aside>
 					<h3>Code It: Creating Variables</h3>
 					<p>Declare a variable with the following format: </p>
 					<pre><code class='java'>type name;</code></pre>
@@ -222,6 +242,17 @@ public class HelloWorld {
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						public static void main(String[] args) {<br>
+							// TODO Auto-generated method stub<br>
+							System.out.println("Hello World");<br>
+							int numberPassengers;<br>
+							int maxNumberPassengers;<br>
+							boolean isFull;<br>
+							<strong>numberPassengers=1;</strong><br>
+						}<br>
+						"Variable Name" "Operator" "Value"
+					</aside>
 					<h3>Assignment Operators</h3>
 					<p>To assign a value to a variable we use the assignment operator: </p>
 					<pre><code class='java'>=</code></pre>
@@ -229,6 +260,16 @@ public class HelloWorld {
 					<pre><code class='java'>numberPassgeners = 1;</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						public static void main(String[] args) {<br>
+							// TODO Auto-generated method stub<br>
+							System.out.println("Hello, World!");<br>
+							int numberPassengers;<br>
+							<strong>int maxNumberPassengers=2;</strong><br>
+							boolean isFull;<br>
+							numberPassengers=1;<br>
+						}
+					</aside>
 					<h3>Initialization</h3>
 					<p>We just <em>initialized</em> numberPassgeners</p>
 					<p>Initilization is the first (initial) assignment of a value to a variable</p>
@@ -239,6 +280,16 @@ public class HelloWorld {
 					<pre><code class='java'>int maxNumberPassengers = 2</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						public static void main(String[] args) {<br>
+							// TODO Auto-generated method stub<br>
+							System.out.println("Hello World");<br>
+							int numberPassengers;<br>
+							int maxNumberPassengers=2;<br>
+							<strong>boolean isFull=false;</strong><br>
+							numberPassengers=1;<br>
+						}
+					</aside>
 					<h3>Code it!</h3>
 					<p>Boolean variables have two values:</p>
 					<ul>
@@ -264,18 +315,39 @@ public static void main(String[] args) {
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						Dropping % don't need that with beginners.
+					</aside>
 					<h3>Arithmetic Operators</h3>
 					<p>Just like in math class, we can have arithmetic operators in programming:</p>
 					<pre><code class='java'>+, -, *, /</code></pre>
 					<p>Add, subtract, multiply and divide</p>
 				</section>
 				<section>
+					<aside class='notes'>
+						System.out.println("Hello, World!");<br>
+						int numberPassengers;<br>
+						int maxNumberPassengers=2;<br>
+						boolean isFull=false;<br>
+						numberPassengers=1;<br>
+						<strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
+					</aside>
 					<h3>Code It! Together</h3>
 					<pre><code class='java'>
 maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						System.out.println("Hello, World!");<br>
+						int numberPassengers;<br>
+						int maxNumberPassengers=2;<br>
+						boolean isFull=false;<br>
+						numberPassengers=1;<br>
+						maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!<br>
+						<strong>numberPassengers=numberPassengers+1;<br>
+							System.out.println("Number of Passengers: "+numberPassengers);</strong><br>
+					</aside>
 					<h3>Code it!</h3>
 					<p class='individually'>On your own: </p>
 					<ul>
@@ -306,6 +378,15 @@ Number of Passengers: 2
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						int currentSpeed = 0;<br>
+						currentSpeed = currentSpeed + 20;<br>
+						System.out.println("Current Speed: "+currentSpeed);<br>
+						currentSpeed = currentSpeed/2;<br>
+						System.out.println("Current Speed: "+currentSpeed);<br>
+						currentSpeed = currentSpeed *3;<br>
+						System.out.println("Current Speed: "+currentSpeed);<br>
+					</aside>
 					<h3>Code It: Playing with Arithmetic Operators</h3>
 					<p><span class='individually'>On your own:</span></p>
 					<ol>
@@ -367,6 +448,16 @@ The car is full: false
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						Example:<br>
+						isFull = numberPassengers &lt; maxNumberPassengers;<br>
+						System.out.println("We have less than the number of Max Passengers: "+isFull);<br>
+						boolean noMore = numberPassengers >= maxNumberPassengers;<br>
+						System.out.println("I'm full and/or overbooked! "+noMore);<br>
+
+						We have less than the number of Max Passengers: true<br>
+						I'm full and/or overbooked! false<br>
+					</aside>
 					<h3>Code It - <span class='individually'>Individually</span></h3>
 					<ol>
 						<li>True or False? The numberPassengers is less than maxNumberPassengers</li>
@@ -391,6 +482,11 @@ I'm full and/or overbooked! false
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						So evaluate x>0 <br>
+						now evaluate y> 0<br>
+						now evaluate if both of those things were true
+					</aside>
 					<h3>Conditional Operators</h3>
 					<table>
 						<tr>
@@ -406,6 +502,10 @@ positiveNumbers = x>0 &amp;&amp; y>0;
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						I'm only endangering myself false<br>
+						Mention Short Circuiting? If class is doing well with concepts.
+					</aside>
 					<h3>Code It!</h3>
 					<pre><code class='java'>
 boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
@@ -447,6 +547,9 @@ numberPassengers &lt; maxNumberPassengers
 				<p>This expression could be true or false depending on the values of the varaibles, but it is not a complete statement of execution</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					There is no semi-colon and the expression on the previous page returns a value but nothing happens.
+				</aside>
 				<h3>Statement</h3>
 				<p>A statement is a complete unit of execution.  It's a sentence in the Java Language.  An instruction that can be carried out from start to end.</p>
 				<p>Let's take a look at one of the statements we've written:</p>
@@ -477,6 +580,17 @@ if (x &lt; 5) {
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						if(numberPassengers < maxNumberPassengers) {<br>
+						System.out.println("Would you like a lift?");<br>
+						}<br>
+						else {<br>
+						System.out.println("Sorry, we're too full");<br>
+						}<br>
+						<br>
+						Expected output: <br>
+						Would you like a lift?
+					</aside>
 					<h3>Code it!</h3>
 					<p>If the number of passengers is less than the max number of passengers allowed, offer a ride</p>
 					<p>Otherwise, apologize</p>
@@ -498,6 +612,12 @@ Would you like a lift?
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						Highlight the order<br>
+						if goes at the top<br>
+						else if goes in the middle (as many as you want)<br>
+						Else goes at the bottom
+					</aside>
 					<h3>else if</h3>
 					<p>You also have an else if statement at your disposal:</p>
 					<pre><code class='java'>
@@ -511,6 +631,17 @@ if (x &lt; 5) {
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						if(numberPassengers &lt; maxNumberPassengers) {<br>
+						System.out.println("Would you like a lift?");<br>
+						}<br>
+						else if(numberPassengers == maxNumberPassengers-1){<br>
+						System.out.println("Room for one more!");<br>
+						}<br>
+						else {<br>
+						System.out.println("Sorry, we're too full");<br>
+						}
+					</aside>
 					<h3>Code it - <span class='individually'>Individually</span></h3>
 					<p>Add an else if statement to your current if/else block that prints out "We have room for one more" if the number of passengers is equal to the number of Max passengers minus 1.</p>
 				</section>
@@ -548,6 +679,21 @@ switch (holiday) {
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						switch(numberPassengers){<br>
+						case 1: System.out.println("I love driving by myself");<br>
+						case 2: System.out.println("They always call shotgun");<br>
+						case 3: System.out.println("third wheel");<br>
+						case 4: System.out.println("Full house!");<br>
+						default: System.out.println("over the top");<br>
+						}<br>
+						<br>
+						<strong>Expected output:</strong><br> 
+						they always call shotgun<br>
+						third wheel<br>
+						Fullhouse!<br>
+						Over the Top
+					</aside>
 					<h3>Code It!</h3>
 					<p>Let's create a switch statement based on the numberPassengers variable</p>
 					<p>Print the following sayings for the corresponding value: </p>
@@ -560,6 +706,10 @@ switch (holiday) {
 					<p>Default :Over the top!</p>
 				</section>
 				<section>
+					<aside class='notes'>
+						In our case numberPassengers is 2<br>
+						so everthing (including) after "They always call shotgun" prints
+					</aside>
 					<h3>Wait a Minute! Take a break</h3>
 					<p>Without any break" statements the switch blocks "falls through" and executes everything after the matching value too!</p>
 				</section>
@@ -573,6 +723,22 @@ case 1: System.out.println("I love driving by myself");
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						switch(numberPassengers){<br>
+						case 1: System.out.println("I love driving by myself");<br>
+						break;<br>
+						case 2: System.out.println("They always call shotgun");<br>
+						break;<br>
+						case 3: System.out.println("third wheel");<br>
+						break;<br>
+						case 4: System.out.println("Full house!");<br>
+						break;<br>
+						default: System.out.println("over the top");<br>
+						}<br>
+						<br>
+						The default block is at the bottom of the switch block<br>
+						it cannot fall through
+					</aside>
 					<h3>The Code</h3>
 					<pre><code class='java'>
 switch (numberPassengers) {
@@ -609,6 +775,11 @@ for (initial variable; test condition; increment) { }
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						for(int mySpeed=0; mySpeed<55; mySpeed+=10){<br>
+							System.out.println("I'm going "+mySpeed+" mph!");<br>
+						}
+					</aside>
 					<h3>Code it!</h3>
 					<pre><code class='java'>
 for (int mySpeed = 0; mySpeed &lt; 55; mySpeed +=10) {
@@ -640,6 +811,19 @@ while (condition) {
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						isFull = numberPassengers == maxNumberPassengers;<br>
+						while(!isFull){<br>
+						numberPassengers++;<br>
+						System.out.println("I'm Carrying: "+numberPassengers);<br>
+						isFull = numberPassengers == maxNumberPassengers;<br>
+						}<br>
+						<br>
+						<strong>Output:</strong> <br>
+						I'm Carrying: 3<br>
+						I'm Carrying: 4<br>
+						I'm Carrying: 5
+					</aside>
 					<h3>Code It!</h3>
 					<p>While isFull is NOT true, add a passengers then update the value of isFull</p>
 				</section>
@@ -698,6 +882,10 @@ garage[2] = "Pontiac";
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						It's size/length is 3<br>
+						It's currently holding Chevy, Ford and Pontiac 
+					</aside>
 					<h3>Array - States</h3>
 					<p>The state of an array can be described by: </p>
 					<ul>
@@ -707,6 +895,9 @@ garage[2] = "Pontiac";
 					<p>**Describe our Array in these terms</p>
 				</section>
 				<section>
+					<aside class='notes'>
+						Highlight  Making use of .length state/property
+					</aside>
 					<h3>Arrays and For loops are BFFs</h3>
 					<pre><code class='java'>
 for (int i=0; i&lt;garage.length; i++) {
@@ -718,7 +909,7 @@ for (int i=0; i&lt;garage.length; i++) {
 			<section>
 				<h3>String Object</h3>
 				<p>We created an Array of Strings</p>
-				<p>Strings are a type of Object</p>
+				<p><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html">Strings</a> are a type of Object</p>
 				<p>We can create a signel string object by declaring a variable of type String and assigning it a new String object with some value</p>
 				<pre><code class='java'>
 String dreamCar = new String("Corvette");
@@ -750,6 +941,9 @@ System.out.println("It's all lower " + dreamCar.toLowerCase());
 					</code></pre>
 				</section>
 				<section>
+					<aside class='notes'>
+						System.out.println("It's all upper " + dreamCar.toUpperCase());
+					</aside>
 					<h3 class='individually'>On your own</h3>
 					<p>Call and print the result of the "toUpperCase()" method</p>
 				</section>
@@ -801,6 +995,9 @@ Double mpg = new Double("49.1");
 				</section>
 			</section>
 			<section>
+				<aside class='notes'>
+					Take a look at the constructor summary in the Java Docs
+				</aside>
 				<h3>Constructors</h3>
 				<p>When we create an objects, its data members have an initial value</p>
 				<p>The initial state of the object is set by its constructor.</p>

@@ -17,13 +17,12 @@
 	<link rel="stylesheet" href="css/gdi.css">
 
 	<!-- For syntax highlighting -->
-	<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-	<!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 	<link rel="stylesheet" href="reveal/plugin/highlight/styles/zenburn.css">
+
 	<!-- For the slides -->
 	<link rel="stylesheet" href="css/slides.css">
-	<!-- If use the PDF print sheet so students can print slides-->
 
+	<!-- If use the PDF print sheet so students can print slides-->
 	<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 	<!--[if lt IE 9]>
@@ -78,10 +77,29 @@
 				<p>MotorVehicles which are types of Vehicles and include cars and buses</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					Create an "Interface" based on this discussion<br>
+					Have an engine whose state can be on or off<br>
+					you can turn an engine on<br>
+					you can turn  an engine of<br>
+					------<br>
+					Have a current speed<br>
+					accelerate<br>
+					decelerate<br>
+					check your current speed -- accessor method<br>
+					------<br>
+					color<br>
+					maximum number of passengers -accessor method<br>
+					current number of passengers -- accessor method<br>
+				</aside>
 				<p>Describe a Motor Vehicle's states and behaviors</p>
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						Think of how with a single recipe you can create cookies MANY times...<br>
+						Note to self: Bring cookies to class
+					</aside>
 					<h3>Classes</h3>
 					<p>A Class is a blueprint of an Object</p>
 					<p>It tells us how to build an instance of an Object.</p>
@@ -114,10 +132,21 @@ public class MotorVehicle {
 			</section>
 			<section>
 				<section>
+					<aside class='notes'>
+						Flip back to our notes and list the data members
+					</aside>
 					<h3>Data Members</h3>
 					<p>An Object has one or more data members that describe its state.</p>
 				</section>
 				<section>
+					<aside class='notes'>
+						public class MotorVehicle {<br>
+						boolean engineOn;<br>
+						int currentSpeed;<br>
+						int maxNumberPassengers;<br>
+						int numCurrentPassengers;<br>
+						}<br>
+					</aside>
 					<h3>Defining Data Members</h3>
 					<pre><code class='java'>
 boolean engineOn;
@@ -149,6 +178,10 @@ int currentSpeed;
 				<p>A method signature includes the method's name plus the number and type of paramters</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					addPassenger?<br>
+					removePassenger?
+				</aside>
 				<h3>MotorVehicle Methods</h3>
 				<pre><code class='java'>
 public void accelerate();
@@ -165,6 +198,19 @@ public void accelerate() {
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					void decelerate(){<br>
+					currentSpeed = currentSpeed - 5;<br>
+					}<br>
+					<br>
+					void addPassenger(){<br>
+					currentNumPassengers++;<br>
+					}<br>
+					<br>
+					void removePassenger{<br>
+					currentNumPassengers--;<br>
+					}
+				</aside>
 				<h3><span class='individually'>Individually</span></h3>
 				<p>Add a decelerate method that slows the motor vehicle down in increments of 5.</p>
 				<p>Add a method that will swtich the engine's state</p>
@@ -227,6 +273,22 @@ nameOfInstance.datamember;
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					MotorVehicle myVehicle = new MotorVehicle();<br>
+					myVehicle.switchEngineState();<br>
+					System.out.println("Engine is On: "+myVehicle.engineOn);<br>
+					System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
+					myVehicle.accelerate();<br>
+					System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
+					myVehicle.decelerate();<br>
+					System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
+					<br>
+					<strong>output:</strong><br>
+					Engine is on: true<br>
+					Current Speed: 0<br>
+					Current Speed: 5<br>
+					Current Speed: 0
+				</aside>
 				<h3>Code It!</h3>
 				<p>Now use a method of your motor vehicle class: </p>
 				<ol>
@@ -258,6 +320,11 @@ Current Speed: 0
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					public void printDescription(){<br>
+					System.out.println("I'm a Motor Vehicle and my Engine is on "+engineOn+" and i'm going "+currentSpeed+"mph");<br>
+					}<br>
+				</aside>
 				<h3><span class='individually'>Individually</span></h3>
 				<p>Create a method called printDescription that will print the following statement:</p>
 				<pre><code class='no-highlight'>
@@ -278,6 +345,9 @@ I'm currently going (#)mph.
 		</section>
 		<section>
 			<section>
+				<aside class='notes'>
+					We've already seen this with the public modifiers on our class declaration and method declaration
+				</aside>
 				<h3>Data Members - Access Modifiers</h3>
 				<p>We can make these data members public or private</p>
 				<p>Public members can be accessed by all other classes</p>
@@ -299,6 +369,11 @@ instanceOfObject.fieldName
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+				The field MotorVehicle.currentSpeed is not visible<br>
+				b/c currentSpeed is now private<br>
+				b/c it's public
+				</aside>
 				<h3>Oops!</h3>
 				<p>What is the error we received?</p>
 				<p>Why did we receive it?</p>
@@ -324,11 +399,20 @@ instanceOfObject.fieldName
 				</ol>
 			</section>
 			<section>
+				<aside class='notes'>
+					Change from public to private:<br>
+					private boolean engineOn;  
+				</aside>
 				<h3>Encapsulating our Data</h3>
 				<p>Let's make all our data members private</p>
 				<p>Now we'll need to add accessor methods so we can still access the data</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					public boolean getEngineOn(){<br>
+					return engineOn;<br>
+					}<br>
+				</aside>
 				<h3>Code It!</h3>
 				<p>Add an accessor method to get the current speed: </p>
 				<pre><code class='java'>
@@ -346,6 +430,14 @@ public boolean getEngineOn() {
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					System.out.println("Engine is On: "+myVehicle.getEngineOn());<br>
+					System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
+					myVehicle.accelerate();<br>
+					System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
+					myVehicle.decelerate();<br>
+					System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
+				</aside>
 				<h3>Update our Code</h3>
 				<p>Now instead of calling on your data members directly, use the accessor methods we just created to get their values.</p>
 			</section>
@@ -362,6 +454,9 @@ public boolean getEngineOn() {
 		</section>
 		<section>
 			<section>
+				<aside class='notes'>
+					The constructor
+				</aside>
 				<h3>Static: An Example</h3>
 				<p>How many cars on the raod?</p>
 				<p>Create a static data member to keep count of the MotorVehicles we've created: </p>
@@ -392,6 +487,9 @@ public int getCountCreated() {
 				<p><span class='individually'>On your own,</span> print the countCreated</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					Note that they are the same because they are referencing the same data member
+				</aside>
 				<h3>Testing our Static Data Member</h3>
 				<ol>
 					<li>Create a second MotorVehicle myVehicle2</li>
@@ -416,6 +514,11 @@ public static int getCountCreated() {
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					System.out.println("Number of Vehicles: "+MotorVehicle.getCountCreated());<br>
+					MotorVehicle myVehicle2 = new MotorVehicle();<br>
+					System.out.println("Number of Vehicles: "+MotorVehicle.getCountCreated());
+				</aside>
 				<h3>Accessing the static method</h3>
 				<p>You can access a static method the same way you access an instance method, but it is discouraged since it doesn't clearly indicate you accessing a class method.</p>
 				<p>Instead, we will update our code to use this format: </p>
@@ -487,12 +590,20 @@ super();
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					public Car(){<br>
+					super();<br>
+					}
+				</aside>
 				<h3>Code It!</h3>
 				<p>Create a car constructor that calls super()</p>
 			</section>
 		</section>
 		<section>
 			<section>
+				<aside class='notes'>
+					For instance, while a motor boat doesn't necessarily have a door or a trunk all cars do
+				</aside>
 				<h3>What else can you do with a subclass?</h3>
 				<p>You can declare new fields in subclass that aren't in the parent class.</p>
 			</section>
@@ -523,6 +634,14 @@ public class Car extends MotorVehicle {
 				</code></pre>
 			</section>
 			<section>
+				<aside class='notes'>
+					Car myCar = new Car();<br>
+					System.out.println(myCar.getCurrentSpeed());<br>
+					myCar.accelerate();<br>
+					System.out.println(myCar.getCurrentSpeed());<br>
+					myCar.printDescription();<br>
+					System.out.println("Number of Vehicles: "+MotorVehicle.getCountCreated());
+				</aside>
 				<h3>Test it Out</h3>
 				<p>In your HelloWorld class:</p>
 				<ol>
@@ -535,6 +654,11 @@ public class Car extends MotorVehicle {
 				</ol>
 			</section>
 			<section>
+				<aside class='notes'>
+					Highlight that we now have 3 motor vehicles<br>
+					Trace through calling the parent's constructor and methods<br>
+					Car must be rolling down the street...someone forgot the emergency break
+				</aside>
 				<h3>The Code</h3>
 				<pre><code class='java'>
 Car myCar = new Car();
@@ -576,6 +700,10 @@ public int getNumDoors() {
 		</section>
 		<section>
 			<section>
+				<aside class='notes'>
+					Optionally have the  @Override notation<br>
+					Potentially useful since it shows up in all my android projects a # of times..
+				</aside>
 				<h3>Overriding Methods</h3>
 				<p>Instance Methods:</p>
 				<p>An instance method in a subclass (child class) that has the same signature and return type as an instance method in the superclass <em>overrides</em> the superclass's method.</p>
@@ -586,6 +714,11 @@ public int getNumDoors() {
 				<p>I'm a car!  I have (#) doors!</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					If we comment out the printDescription() code in Car, the code calls the printDescription() of the parent class<br>
+					uncomment and it uses the car<br>
+					Any questions?
+				</aside>
 				<h3>Overriding Methods Cont.</h3>
 				<p>The output of myCar.printDescription() now says: </p>
 				<pre><code class='no-highlight'>
@@ -627,6 +760,9 @@ public void accelerate(int amount) {
 		</section>
 		<section>
 			<section>
+				<aside class='notes'>
+					Protected is also accessed by classes in the same package
+				</aside>
 				<h3>Fields</h3>
 				<p>Inherited Fields</p>
 				<p>A subclass can't access a parent's private members</p>
@@ -648,6 +784,10 @@ System.out.println(myCar.getCurrentSpeed());
 			</section>
 		</section>
 		<section>
+			<aside class='notes'>
+				Polymorphism can be a bit of an advanced topic since it's really covers a lot of ground with various types<br>
+				We want to mention it so they can say "ooooh yeah I've heard of that"  not much to do with it in java
+			</aside>
 			<h3>Polymorphism</h3>
 			<p>Assuming a subclass has overloaded a method in the parent class:</p>
 			<p><em>"When an application needs the function, the particular version is dynamically determined at runtime"</em> - William Ford, William Topp Data Structures with C++ using STL</p>
@@ -659,6 +799,13 @@ System.out.println(myCar.getCurrentSpeed());
 				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) couldk be instantiated</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					No<br>
+					You have cars<br>
+					Trucks<br>
+					Buses<br>
+					But nothing that's just a generic MotorVehicle
+				</aside>
 				<h3>Building an Abstract Class</h3>
 				<p>Abstract classes can contain partial implementations</p>
 				<p>Will you ever have just a <em>MotorVehicle</em> on the road?</p>
@@ -681,6 +828,11 @@ public abstract class MotorVehicle { ... }
 				</ol>
 			</section>
 			<section>
+				<aside class='notes'>
+					Flexibility -- MotorVehicle could be used as a parameter in methods  and any MotorVehicle (regardless of subtype) could be passed when declared like this<br>
+					<br>
+					Polymorphism
+				</aside>
 				<h3>Updating Cont.</h3>
 				<p>Since car extends MotorVehicle we can:</p>
 				<pre><code class='java'>
@@ -691,11 +843,22 @@ MotorVehicle myVehicle2 = new Car();
 			</section>
 		</section>
 		<section>
+			<aside class='notes'>
+				Hiding really only matters if you used the parent class type when declaring a new instace of a subclass<br>
+				i.e.<br>
+				MotorVehicle myOtherCar = new Car();<br>
+				<br>
+				If we call myOtherCar.staticMethod() it will look at the declared type "MotorVehicle" and call that static method
+			</aside>
 			<h3>Hiding Methods</h3>
 			<p>Class Methods:</p>
 			<p>If a subclass defines a class method with the same signature as a class method in the superclass, the method in the subclass hides the one in the superclass</p>
 		</section>
 		<section>
+			<aside class='notes'>
+				Give them plenty of time to play around with creating their own subclass<br>
+				Encourage them to use the concepts discussed
+			</aside>
 			<h3>Code It!</h3>
 			<p><span class='individually'>On your own,</span> create a Bus that extends MotorVehicle</p>
 			<p>Additional Bus specific Methods to include: </p>
@@ -705,6 +868,10 @@ MotorVehicle myVehicle2 = new Car();
 			</ol>
 		</section>
 		<section>
+			<aside class='notes'>
+				Circle back to our initial discussion on what it takes to be a motor vehicle and relate that to our motorvehicle<br>
+				ALSO  -- how will other people interact with our class? An interface could tell them
+			</aside>
 			<h3>Interfaces</h3>
 			<p>If an abstract class only contains abstract method declarations, it is an interface</p>
 			<p>An <em>interface</em> tells people how to interact with an object</p>
