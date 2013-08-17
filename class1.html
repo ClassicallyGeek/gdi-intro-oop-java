@@ -6,8 +6,8 @@
 
 	<title>GDI Introduction to Java and OOP Concepts</title>
 
-	<meta name="description" content="This is the official Girl Develop It Intermediate Core HTML/CSS curriculum. It was developed through the contributions of Julie Pagano, Jen Myers, Alexis Goldstein and Izzy Johnston.   The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-	<meta name="author" content="Girl Develop It">
+	<meta name="description" content="Intro to Object Oriented Programming with Java curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
+	<meta name="author" content="Ashley Price">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -18,8 +18,6 @@
 	<link rel="stylesheet" href="css/gdi.css">
 
 	<!-- For syntax highlighting -->
-	<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-	<!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 	<link rel="stylesheet" href="reveal/plugin/highlight/styles/zenburn.css">
 	<!-- For the slides -->
 	<link rel="stylesheet" href="css/slides.css">
@@ -43,32 +41,33 @@
 				<img src="images/gdi_logo_badge.png" alt="" />
 				<h3>Intro to Java and OOP Concepts</h3>
 				<h4>Class 1</h4>
+				<h5 class='title-page'>Developed for GDI by Ashley Price</h5>
 			</section>
 
 			<!-- Welcome-->
 			<section>
-				<h3>Welcome!</h3>
-				<div class="left-align">
-					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-					<p class="green">Some "rules"</p>
+				<section>
+					<h3>Welcome!</h3>
+						<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+				</section>
+				<section>
+					<h3>Some "Rules"</h3>
 					<ul>
 						<li>We are here for you!</li>
 						<li>Every question is important</li>
 						<li>Help each other</li>
-						<li>Have fun</li>
+						<li>Be Respectful</li>
+						<li>Have fun!</li>
 					</ul>
-				</div>
-			</section>
-			<section>
-				<h3>Welcome!</h3>
-				<div class="left-align">
-					<p class="blue">Tell us about yourself.</p>
+				</section>
+				<section>
+					<h3>Introductions</h3>
 					<ul>
 						<li>Who are you?</li>
+						<li>What spurred you into learning about development?</li>
 						<li>What do you hope to get out of the class?</li>
-						<li>What is your favorite dinosaur?</li>
 					</ul>
-				</div>
+				</section>
 			</section>
 
 			<!-- Creating a new project -->
@@ -91,7 +90,7 @@
 					<h3> Adding our First Class</h3>
 					<ol>
 						<li>File > New > Class</li>
-						<li>Name: Hello World</li>
+						<li>Name: HelloWorld <em>(make sure there are no spaces)</em></li>
 						<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
 						<li>Click finish</li>
 					</ol>
@@ -190,7 +189,7 @@ public class HelloWorld {
 					<h3>Statically Typed Variables Illustrated</h3>
 					<p>You can think of variables as little boxes that hold a value</p>
 					<p>In strongly typed langauges, variables only hold the "kind of value" they were declared to: </p>
-					<img src="images/variable_illustration.jpg">
+					<img src="images/variables_illustrated.png">
 				</section>
 				<section>
 					<aside class='notes'>
@@ -227,6 +226,18 @@ public class HelloWorld {
 						<li>boolean isFull</li>
 					</ul>
 				</section>
+				<section>
+					<h3>The Code</h3>
+					<pre><code class='java'>
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World!");
+		int numberPassengers;
+		int maxNumberPassengers;
+		boolean isFull;
+	}
+					</code></pre>
+				 </section>
 			</section>
 			<section>
 				<section>
@@ -332,7 +343,7 @@ public static void main(String[] args) {
 						numberPassengers=1;<br>
 						<strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
 					</aside>
-					<h3>Code It! Together</h3>
+					<h3>Code It!</h3>
 					<pre><code class='java'>
 maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 					</code></pre>
@@ -351,7 +362,7 @@ maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 					<h3>Code it!</h3>
 					<p class='individually'>On your own: </p>
 					<ul>
-						<li>Increment the numberPassgeners value by one</li>
+						<li>Increment the numberPassengers value by one</li>
 						<li>Then use the System.out.println method to show the result:
 							<pre><code class='java'>
 System.out.println("Number of Passengers: "+numberPassengers);
@@ -408,6 +419,18 @@ Number of Passengers: 2
 Current Speed: 20
 Current Speed: 10
 Current Speed: 30
+					</code></pre>
+				</section>
+				<section>
+					<h3>The Code</h3>
+					<pre><code class='java'>
+int currentSpeed = 0;
+currentSpeed = currentSpeed + 20;
+System.out.println("Current Speed: "+currentSpeed);
+currentSpeed = currentSpeed / 2;
+System.out.println("Current Speed: "+currentSpeed);
+currentSpeed = currentSpeed * 3;
+System.out.println("Current Speed: "+currentSpeed);
 					</code></pre>
 				</section>
 			</section>
@@ -472,6 +495,8 @@ The car is full: false
 isFull = numberPassengers &lt; maxNumberPassengers;
 System.out.println("We have less than the number of Max Passengers: "
 	+ isFull);
+boolean noMore = numberPassengers > maxNumberPassengers;
+System.out.println("I'm full and/or overbooked! " + noMore);
 					</code></pre>
 					<p>Output:</p>
 					<pre><code class='no-highlight'>
@@ -947,6 +972,12 @@ System.out.println("It's all lower " + dreamCar.toLowerCase());
 					<h3 class='individually'>On your own</h3>
 					<p>Call and print the result of the "toUpperCase()" method</p>
 				</section>
+				<section>
+					<h3>The Code</h3>
+					<pre><code class='java'>
+System.out.println("It's all upper " + dreamCar.toUpperCase());
+					</code></pre>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -1015,6 +1046,10 @@ Double mpg = new Double("49.1");
 				<p>If a boolean can be yes or no, a null value would signify "undecided"</p>
 			</section>
 		</div> <!-- end slides -->
+		<footer>
+			<span class='footer-title'>Intro to OOP with Java</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+		</footer>
 	</div> <!-- end reveal -->
 	<script src="reveal/lib/js/head.min.js"></script>
 	<script src="reveal/js/reveal.min.js"></script>

@@ -33,3 +33,40 @@
 .individually {
 	color: #F05B62;
 }
+
+.reveal footer{
+	color: #c9c2ae;
+	position: fixed;
+	height: 40px;
+	width: 100%;
+	bottom: 3px;
+	padding: 0 5px;
+	left: 0;
+	z-index: 10;·
+	font-size: .8em;
+	text-align:right;
+	background-image: url(../images/watermark-logo-2.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+ transition: background-image .35s ease-in-out;
+ -moz-transition: background-image .35s ease-in-out;
+ -webkit-transition: background-image .25s ease-in-out;
+}
+
+.reveal footer:hover {
+	background-image: url(../images/pink-logo.png);
+}
+
+span.footer-title {
+	font-size: .5em;
+}
+
+.reveal .controls {
+	bottom: 20px;
+}
+
+.reveal h5.title-page {
+	color: #C9C2AE;
+	font-size: .6em;
+	padding-top: 25px;
+}
