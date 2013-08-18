@@ -6,7 +6,7 @@
 
 	<title>GDI Introduction to Java and OOP Concepts</title>
 
-	<meta name="description" content="This is the official Girl Develop It Intermediate Core HTML/CSS curriculum. It was developed through the contributions of Julie Pagano, Jen Myers, Alexis Goldstein and Izzy Johnston.   The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+	<meta name="description" content="Intro to Object Oriented Programming with Java curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
 	<meta name="author" content="Girl Develop It">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -41,24 +41,44 @@
 				<img src="images/gdi_logo_badge.png" alt="" />
 				<h3>Intro to Java and OOP Concepts</h3>
 				<h4>Class 2</h4>
+				<h5 class='title-page'>Developed for GDI by Ashley Price</h5>
 			</section>
 
 			<!-- Welcome-->
 			<section>
 				<h3>Welcome!</h3>
-				<div class="left-align">
-					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-					<p class="green">Some "rules"</p>
-					<ul>
-						<li>We are here for you!</li>
-						<li>Every question is important</li>
-						<li>Help each other</li>
-						<li>Have fun</li>
-					</ul>
-				</div>
 			</section>
 			<section>
-				<h3>Review</h3>
+				<section>
+					<h3>Review - Variables</h3>
+						<ul>
+							<li>Stronly typed</li>
+							<li>Primatives</li>
+							<li>Objects</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Review - Flow Control</h3>
+						<ul>
+							<li>Choices</li>
+							<ul>
+								<li>If/Else</li>
+								<li>Swtich</li>
+							</ul>
+							<li>Loops</li>
+							<ul>
+								<li>For Loops</li>
+								<li>While Loops</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Review - Objects</h3>
+						<ul>
+							<li>States - Also called properties and data members</li>
+							<li>Behaviors - actions the object can take.  Known as methods</li>
+						</ul>
+					</section>
 			</section>
 			<section>
 				<h3>Agenda</h3>
@@ -115,12 +135,26 @@ class ClassName {
 					</code></pre>
 				</section>
 				<section>
-					<h3>Create a new class</h3>
-					<ol>
-						<li>File > New > Class</li>
-						<li>Class Name: MotorVehicle</li>
-						<li>Modifiers: Default</li>
-					</ol>
+						<h3>Create a new project</h3>
+						<ol>
+							<li>File > New > Project</li>
+							<li>Project name: com.gdi.vehicles</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Create a new class with a main method</h3>
+						<ol>
+							<li>File > New > Class</li>
+							<li>Class Name: tester</li>
+							<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
+					</section>
+					<section>
+						<h3>Create a new class</h3>
+						<ol>
+							<li>File > New > Class</li>
+							<li>Class Name: MotorVehicle</li>
+						</ol>
+					</section>
 				</section>
 				<section>
 					<h3>The Code</h3>
@@ -158,7 +192,7 @@ int currentSpeed;
 				<section>
 					<h3>Defining a Constructor</h3>
 					<p>When you create an Object, you should include at least one constructor.  If you do not, the compiler automatically provides a default one.</p>
-					<p>A constructor is a special method that is invoked when you create a new instrance of your object</p>
+					<p>A constructor is a special method that is invoked when you create a new instance of your object</p>
 					<p>It is common to set default values for your data members in the constructor</p>
 				</section>
 				<section>
@@ -254,7 +288,7 @@ nameOfInstance = new ObjectType(String ex);
 			<section>
 				<h3>Code It!</h3>
 				<p>Create a MotorVehicle Object</p>
-				<p>In the main method of the HelloWorld class, add the following line: </p>
+				<p>In the main method of the Tester class, add the following line: </p>
 				<pre><code class='java'>
 MotorVehicle myVehicle = new MotorVehicle();
 				</code></pre>
@@ -332,6 +366,15 @@ I'm a MotorVehicle and my engine is on (true/false) and
 I'm currently going (#)mph.
 				</code></pre>
 				<p>Test it by calling myVehicle.printDescription();</p>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+public void printDescription	() {
+	System.out.println("I'm a MotorVehicle and my engine is on " + engineOn + 
+		" and I'm currently going " + currentSpeed + " mph.");
+}
+				</code></pre>
 			</section>
 		</section>
 		<section>
@@ -416,7 +459,7 @@ instanceOfObject.fieldName
 				<h3>Code It!</h3>
 				<p>Add an accessor method to get the current speed: </p>
 				<pre><code class='java'>
-int getCurrentSpeed() {
+public int getCurrentSpeed() {
 	return currentSpeed;
 }
 				</code></pre>
@@ -440,6 +483,9 @@ public boolean getEngineOn() {
 				</aside>
 				<h3>Update our Code</h3>
 				<p>Now instead of calling on your data members directly, use the accessor methods we just created to get their values.</p>
+				<pre><code class='java'>
+System.out.println("Current Speed: " + myVehicle.getCurrentSpeed());
+				</code></pre>
 			</section>
 		</section>
 		<section>
@@ -448,9 +494,6 @@ public boolean getEngineOn() {
 				<p>When a method is declared static, it is <strong>shared</strong> by all instances of the class.</p>
 				<p>In contrast, the type of methods we've been using have been <strong>unique</strong> to each instance.</p>
 			</section>
-			<section>
-				<h3>Illustrated</h3>
-			</section>
 		</section>
 		<section>
 			<section>
@@ -458,10 +501,10 @@ public boolean getEngineOn() {
 					The constructor
 				</aside>
 				<h3>Static: An Example</h3>
-				<p>How many cars on the raod?</p>
+				<p>How many cars on the road?</p>
 				<p>Create a static data member to keep count of the MotorVehicles we've created: </p>
 				<pre><code class='java'>
-private static int countCreated;
+private static int countCreated = 0;
 				</code></pre>
 				<p>Each time a MotorVehicle is created we want to increment the count.</p>
 				<p>Where would we put the code to do so?</p>
@@ -487,21 +530,28 @@ public int getCountCreated() {
 				<p><span class='individually'>On your own,</span> print the countCreated</p>
 			</section>
 			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+System.out.println("Number of vehicles on the road: " +
+	myVehicle.getCountCreated());
+				</code></pre>
+			</section>
+			<section>
 				<aside class='notes'>
 					Note that they are the same because they are referencing the same data member
 				</aside>
 				<h3>Testing our Static Data Member</h3>
 				<ol>
 					<li>Create a second MotorVehicle myVehicle2</li>
-					<li>Print the result of myVehicle.getCount()</li>
-					<li>Print the result of myVehicle.getCount()</li>
+					<li>Print the result of myVehicle.getCountCreated()</li>
+					<li>Print the result of myVehicle.getCountCreated()</li>
 				</ol>
 			</section>
 		</section>
 		<section>
 			<section>
 				<h3>Static Method</h3>
-				<p>Since the countCreated is not specific to the instance, we might want to make a method that is not specific to the instance when accessing the data.</p>
+				<p>Since the <em>countCreated</em> is not specific to the instance, we might want to make a method that is not specific to the instance when accessing the data.</p>
 				<p>We can create static methods that (like a static data member) is shared by all instance.</p>
 			</section>
 			<section>
@@ -530,12 +580,12 @@ ClassName.staticMethodName();
 				<h3>The Code</h3>
 				<pre><code class='java'>
 System.out.println("Number of Vehicles: " +
-	MotorVehicles.getCountCreated());
+	MotorVehicle.getCountCreated());
 
 MotorVehicle myVehicle2 = new MotorVehicle();
 
 System.out.println("Number of Vehicles: " +
-	MotorVehicles.getCountCreated());
+	MotorVehicle.getCountCreated());
 				</code></pre>
 			</section>
 		</section>
@@ -598,6 +648,16 @@ super();
 				<h3>Code It!</h3>
 				<p>Create a car constructor that calls super()</p>
 			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+public class Car extends MotorVehicle {
+	public Car() {
+		super();
+	}
+}
+				</code></pre>
+			</section>
 		</section>
 		<section>
 			<section>
@@ -608,6 +668,15 @@ super();
 				<p>You can declare new fields in subclass that aren't in the parent class.</p>
 			</section>
 			<section>
+				<aside class='notes'>
+					public class Car extends MotorVehicle {<br>
+					<strong>private boolean trunkOpen;<br>
+					private int numDoors;</strong><br>
+					public Car() {<br>
+					super();<br>
+					}<br>
+					}
+				</aside>
 				<h3>Code It!</h3>
 				<ol>
 					<li>Add a boolean called trunkOpen</li>
@@ -615,6 +684,26 @@ super();
 				</ol>
 			</section>
 			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+public class Car extends MotorVehicle {
+	private boolean trunkOpen;
+	private int numDoors;
+	
+	public Car() {
+		super();
+	}
+}
+				</code></pre>
+			</section>
+			<section>
+				<aside class='notes'>
+					public Car() {<br>
+					super();<br>
+					<strong>trunkOpen = false;<br>
+					numDoors = 4;</strong><br>
+					}
+				</aside>
 				<h3>Augment the constructor</h3>
 				<p>Our constructor should also be initialize the subclass-only data members</p>
 				<p>Initialize trunkOpen to false and numDoors to 4</p>
@@ -636,6 +725,7 @@ public class Car extends MotorVehicle {
 			<section>
 				<aside class='notes'>
 					Car myCar = new Car();<br>
+					myCar.switchEngineState();<br>
 					System.out.println(myCar.getCurrentSpeed());<br>
 					myCar.accelerate();<br>
 					System.out.println(myCar.getCurrentSpeed());<br>
@@ -646,6 +736,7 @@ public class Car extends MotorVehicle {
 				<p>In your HelloWorld class:</p>
 				<ol>
 					<li>Create a car "myCar"</li>
+					<li>Turn the engineOn</li>
 					<li>Print the car's current speed</li>
 					<li>Accelerate the car</li>
 					<li>Print the car's new current speed</li>
@@ -662,6 +753,7 @@ public class Car extends MotorVehicle {
 				<h3>The Code</h3>
 				<pre><code class='java'>
 Car myCar = new Car();
+myCar.switchEngineState();
 System.out.println(myCar.getCurrentSpeed());
 myCar.accelerate();
 System.out.println(myCar.getCurrentSpeed());
@@ -673,7 +765,7 @@ System.out.println("Number of Vehicles on the road: " +
 				<pre><code class='no-highlight'>
 0
 5
-I'm a Motor Vehicle and my Engine is on false and I'm going 5 mph
+I'm a Motor Vehicle and my Engine is on true and I'm going 5 mph
 Number of Vehicles on the road: 3
 				</code></pre>
 			</section>
@@ -684,6 +776,7 @@ Number of Vehicles on the road: 3
 					<li>trunkOpen</li>
 					<li>numDoors</li>
 				</ol>
+				<p>Call the methods in the Tester</p>
 			</section>
 			<section>
 				<h3>Code</h3>
@@ -695,6 +788,10 @@ public boolean getTrunkOpen() {
 public int getNumDoors() {
 	return numDoors;
 }
+				</code></pre>
+				<pre><code class='java'>
+System.out.println("number doors: " + myCar.getNumDoors());
+System.out.println("the trunk is open: " + myCar.getTrunkOpen());
 				</code></pre>
 			</section>
 		</section>
@@ -710,8 +807,12 @@ public int getNumDoors() {
 			</section>
 			<section>
 				<h3>Code It</h3>
-				<p>Create a printDescription() method for your car class that says:</p>
-				<p>I'm a car!  I have (#) doors!</p>
+				<ol>
+					<li>In the Tester, call the printDescription() method for your car</li>
+					<li>Run it</li>
+					<li>Create a printDescription() method for your car class that says:<em>
+						I'm a car!  I have (#) doors!</em></li>
+				</ol>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -732,7 +833,13 @@ I'm a car!  I have 4 doors!
 				<p>A Final method cannot be overridden in a subclass</p>
 			</section>
 			<section>
-				<p>What method inside MotorVehicle cannot be overridden?</p>
+				<h3>Test it</h3>
+				<p>Add the <em>final</em> keyword to the printDescription() method inside of the MotorVehicle class</p>
+				<pre><code class='java'>
+public final void printDescription() {...}
+				</code></pre>
+				<p>The implication is that the subclass, Car, cannot override the printDescription()</p>
+				<p>Observe the compiler error</p>
 			</section>
 		</section>
 		<section>
@@ -772,7 +879,7 @@ public void accelerate(int amount) {
 			<section>
 				<h3>Quick Detour</h3>
 				<p>Hop back to the MotorVehicle class and update your private member "currentSpeed" to protected.</p>
-				<p>Now that the error has gone, thest out your new method: </p>
+				<p>Now that the error has gone, test out your new method: </p>
 				<pre><code class='java'>
 myCar.accelerate(10);
 System.out.println(myCar.getCurrentSpeed());
@@ -781,6 +888,14 @@ System.out.println(myCar.getCurrentSpeed());
 			<section>
 				<h3><span class='individually'>Individually</span></h3>
 				<p>Overload the decelerate method in the same fashion</p>
+			</section>
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+public void decelerate(int amount) {
+	currentSpeed = currentSpeed - amount;
+}
+				</code></pre>
 			</section>
 		</section>
 		<section>
@@ -796,7 +911,7 @@ System.out.println(myCar.getCurrentSpeed());
 			<section>
 				<h3>Abstraction</h3>
 				<p>Using the <em>abstract</em> keyword when developing a class indicates that the class will never be instantiated</p>
-				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) couldk be instantiated</p>
+				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) could be instantiated</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -850,11 +965,13 @@ MotorVehicle myVehicle2 = new Car();
 				<br>
 				If we call myOtherCar.staticMethod() it will look at the declared type "MotorVehicle" and call that static method
 			</aside>
+<!--
 			<h3>Hiding Methods</h3>
 			<p>Class Methods:</p>
 			<p>If a subclass defines a class method with the same signature as a class method in the superclass, the method in the subclass hides the one in the superclass</p>
 		</section>
 		<section>
+-->
 			<aside class='notes'>
 				Give them plenty of time to play around with creating their own subclass<br>
 				Encourage them to use the concepts discussed
@@ -881,6 +998,10 @@ MotorVehicle myVehicle2 = new Car();
 			<h3>Where to go from here?</h3>
 		</section>
 	</div> <!-- end slides -->
+	<footer>
+		<span class='footer-title'>Intro to OOP with Java</span>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+	</footer>
 	</div> <!-- end reveal -->
 	<script src="reveal/lib/js/head.min.js"></script>
 	<script src="reveal/js/reveal.min.js"></script>
