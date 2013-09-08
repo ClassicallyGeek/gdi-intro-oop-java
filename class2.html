@@ -54,7 +54,7 @@
 				<section>
 					<h3>Review - Variables</h3>
 						<ul>
-							<li>Stronly typed</li>
+							<li>Strongly typed</li>
 							<li>Primatives</li>
 							<li>Objects</li>
 						</ul>
@@ -65,7 +65,7 @@
 							<li>Choices</li>
 							<ul>
 								<li>If/Else</li>
-								<li>Swtich</li>
+								<li>Switch</li>
 							</ul>
 							<li>Loops</li>
 							<ul>
@@ -110,6 +110,7 @@
 					decelerate<br>
 					check your current speed -- accessor method<br>
 					------<br>
+					Potential additional members: <br>
 					color<br>
 					maximum number of passengers -accessor method<br>
 					current number of passengers -- accessor method<br>
@@ -239,6 +240,13 @@ public void accelerate() {
 					currentSpeed = currentSpeed - 5;<br>
 					}<br>
 					<br>
+					switchEngineState() {<br>
+					if(engineOn == true) {<br>
+					engineOn = false; 
+					} else { <br>
+					engineOn = true;
+					}<br>
+					<br>
 					void addPassenger(){<br>
 					currentNumPassengers++;<br>
 					}<br>
@@ -342,6 +350,7 @@ nameOfInstance.datamember;
 				<pre><code class='java'>
 MotorVehicle myVehicle = new MotorVehicle();
 myVehicle.switchEngineState();
+System.out.println("Engine is on: " + myVehcile.EngineOn);
 System.out.println("Current Speed: " + myVehicle.currentSpeed);
 myVehicle.accelerate();
 System.out.println("Current Speed: " + myVehicle.currentSpeed);
@@ -350,6 +359,7 @@ System.out.println("Current Speed: " + myVehicle.currentSpeed);
 				</code></pre>
 				<p>Output:</p>
 				<pre><code class='no-highlight'>
+Engine is on: true
 Current Speed: 0
 Current Speed: 5
 Current Speed: 0
@@ -373,8 +383,9 @@ I'm currently going (#)mph.
 				<h3>The Code</h3>
 				<pre><code class='java'>
 public void printDescription	() {
-	System.out.println("I'm a MotorVehicle and my engine is on " + engineOn + 
-		" and I'm currently going " + currentSpeed + " mph.");
+	System.out.println("I'm a MotorVehicle and my engine is on " + 
+		engineOn + " and I'm currently going " + 
+		currentSpeed + " mph.");
 }
 				</code></pre>
 			</section>
