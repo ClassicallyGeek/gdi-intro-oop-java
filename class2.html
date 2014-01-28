@@ -77,8 +77,8 @@
 					<section>
 						<h3>Review - Objects</h3>
 						<ul>
-							<li>States - Also called properties and data members</li>
-							<li>Behaviors - actions the object can take.  Known as methods</li>
+							<li>States - Also called properties and data members.</li>
+							<li>Behaviors - Actions the object can take.  Known as methods.</li>
 						</ul>
 					</section>
 			</section>
@@ -96,7 +96,7 @@
 			</section>
 			<section>
 				<h3>Featured Object</h3>
-				<p>MotorVehicles which are types of Vehicles and include cars and buses</p>
+				<p>MotorVehicles which are types of Vehicles and include cars and buses.</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -115,7 +115,7 @@
 					maximum number of passengers -accessor method<br>
 					current number of passengers -- accessor method<br>
 				</aside>
-				<p>Describe a Motor Vehicle's states and behaviors</p>
+				<p>Describe a Motor Vehicle's states and behaviors.</p>
 			</section>
 			<section>
 				<section>
@@ -124,9 +124,9 @@
 						Note to self: Bring cookies to class
 					</aside>
 					<h3>Classes</h3>
-					<p>A Class is a blueprint of an Object</p>
+					<p>A Class is a blueprint of an Object.</p>
 					<p>It tells us how to build an instance of an Object.</p>
-					<p>From one blueprint we can create many instances of a single Object</p>
+					<p>From one blueprint we can create many instances of a single Object.</p>
 				</section>
 				<section>
 					<h3>Class Declarations</h3>
@@ -149,7 +149,7 @@ class ClassName {
 						<ol>
 							<li>File > New > Class</li>
 							<li>Class Name: tester</li>
-							<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
+							<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)".</li>
 					</section>
 					<section>
 						<h3>Create a new class</h3>
@@ -195,8 +195,8 @@ int currentSpeed;
 				<section>
 					<h3>Defining a Constructor</h3>
 					<p>When you create an Object, you should include at least one constructor.  If you do not, the compiler automatically provides a default one.</p>
-					<p>A constructor is a special method that is invoked when you create a new instance of your object</p>
-					<p>It is common to set default values for your data members in the constructor</p>
+					<p>A constructor is a special method that is invoked when you create a new instance of your object.</p>
+					<p>It is common to set default values for your data members in the constructor.</p>
 				</section>
 				<section>
 					<h3>Code It!</h3>
@@ -212,7 +212,7 @@ int currentSpeed;
 			<section>
 				<h3>Defining Methods</h3>
 				<p>Method represent the behavior of the Objects.</p>
-				<p>A method signature includes the method's name plus the number and type of paramters</p>
+				<p>A method signature includes the method's name plus the number and type of paramters.</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -256,7 +256,7 @@ public void accelerate() {
 					}
 				</aside>
 				<h3><span class='individually'>Individually</span></h3>
-				<p>Add a decelerate method that slows the motor vehicle down in increments of 5.</p>
+				<p>Add a decelerate method that slows the motor vehicle down in decrements of 5</p>
 				<p>Add a method that will swtich the engine's state</p>
 				<p><em>If</em> the engine is on turn the engine off</p>
 				<p><em>else</em> the engine is off so turn the engine on</p>
@@ -281,8 +281,8 @@ public void switchEngineState() {
 		</section>
 		<section>
 			<section>
-				<p>You build an Object from a class</p>
-				<p>Objects are instances of your classes</p>
+				<p>You build an Object from a class.</p>
+				<p>Objects are instances of your classes.</p>
 			</section>
 			<section>
 				<h3>Objects - Creating </h3>
@@ -290,7 +290,7 @@ public void switchEngineState() {
 				<pre><code class='java'>
 ObjectType nameOfInstance = new ObjectType();
 				</code></pre>
-				<p>where ObjectType() is the Object's constructor.  If the constructor expects parameters you would include them in this statement: </p>
+				<p>Where ObjectType() is the Object's constructor.  If the constructor expects parameters you would include them in this statement: </p>
 				<pre><code class='java'>
 nameOfInstance = new ObjectType(String ex);
 				</code></pre>
@@ -298,7 +298,7 @@ nameOfInstance = new ObjectType(String ex);
 			<section>
 				<h3>Code It!</h3>
 				<p>Create a MotorVehicle Object</p>
-				<p>In the main method of the Tester class, add the following line: </p>
+				<p>In the main method of the tester class, add the following line: </p>
 				<pre><code class='java'>
 MotorVehicle myVehicle = new MotorVehicle();
 				</code></pre>
@@ -336,13 +336,13 @@ nameOfInstance.datamember;
 				<h3>Code It!</h3>
 				<p>Now use a method of your motor vehicle class: </p>
 				<ol>
-					<li>call switchEngineState to turn on the car</li>
-					<li>Print engineOn and confirm it's true</li>
-					<li>Print the currentSpeed</li>
-					<li>Accelerate the vehicle</li>
-					<li>Print the new currentSpeed</li>
-					<li>Decelerate the vehicle</li>
-					<li>Print the new currentSpeed</li>
+					<li>Call switchEngineState to turn on the car.</li>
+					<li>Print engineOn and confirm it's true.</li>
+					<li>Print the currentSpeed.</li>
+					<li>Accelerate the vehicle.</li>
+					<li>Print the new currentSpeed.</li>
+					<li>Decelerate the vehicle.</li>
+					<li>Print the new currentSpeed.</li>
 				</ol>
 			</section>
 			<section>
@@ -405,13 +405,13 @@ public void printDescription	() {
 					We've already seen this with the public modifiers on our class declaration and method declaration
 				</aside>
 				<h3>Data Members - Access Modifiers</h3>
-				<p>We can make these data members public or private</p>
-				<p>Public members can be accessed by all other classes</p>
-				<p>Private memembers can only be accessed within its own class</p>
+				<p>We can make these data members public or private,</p>
+				<p>Public members can be accessed by all other classes.</p>
+				<p>Private memembers can only be accessed within its own class.</p>
 			</section>
 			<section>
 				<h3>Code It!</h3>
-				<p>Mark your data members public and private</p>
+				<p>Mark your data members public and private.</p>
 				<pre><code class='java'>
 public boolean engineOn;
 private int currentSpeed;
@@ -423,6 +423,10 @@ private int currentSpeed;
 				<pre><code class='java'>
 instanceOfObject.fieldName
 				</code></pre>
+			</section>
+			<section>
+				<h3>What difference does it really make?</h3>
+				<p>Try running your code again and see.</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -443,15 +447,15 @@ instanceOfObject.fieldName
 			</section>
 			<section>
 				<h3>Data Encapsulation</h3>
-				<p>Data Encapsulation is to hide or restrict direct access to an object's members</p>
+				<p>Data Encapsulation is to hide or restrict direct access to an object's members.</p>
 				<p>Instead of direct access a set of accessor and modifier methods are used to interact with the data.</p>
 			</section>
 			<section>
 				<h3>Benefits</h3>
 				<ol>
-					<li>Control to make fields read-only and write-only</li>
-					<li>Classes can have absolute control over what is stored in the field</li>
-					<li>Provides a layer of abstraction.  Users of the class (other code or objects) do not need to know the details of the data storage</p>
+					<li>Control to make fields read-only and write-only.</li>
+					<li>Classes can have absolute control over what is stored in the field.</li>
+					<li>Provides a layer of abstraction.  Users of the class (other code or objects) do not need to know the details of the data storage.</p>
 				</ol>
 			</section>
 			<section>
@@ -460,8 +464,8 @@ instanceOfObject.fieldName
 					private boolean engineOn;  
 				</aside>
 				<h3>Encapsulating our Data</h3>
-				<p>Let's make all our data members private</p>
-				<p>Now we'll need to add accessor methods so we can still access the data</p>
+				<p>Let's make all our data members private.</p>
+				<p>Now we'll need to add accessor methods so we can still access the data.</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -476,7 +480,7 @@ public int getCurrentSpeed() {
 	return currentSpeed;
 }
 				</code></pre>
-				<p><span class='individually'>On your own,</span> add an accessor method for the boolean engineOn</p>
+				<p><span class='individually'>On your own,</span> add an accessor method for the boolean engineOn.</p>
 			</section>
 			<section>
 				<pre><code class='java'>
@@ -555,8 +559,8 @@ System.out.println("Number of vehicles on the road: " +
 				</aside>
 				<h3>Testing our Static Data Member</h3>
 				<ol>
-					<li>Create a second MotorVehicle myVehicle2</li>
 					<li>Print the result of myVehicle.getCountCreated()</li>
+					<li>Create a second MotorVehicle myVehicle2</li>
 					<li>Print the result of myVehicle.getCountCreated()</li>
 				</ol>
 			</section>
@@ -612,15 +616,15 @@ System.out.println("Number of Vehicles: " +
 		<section>
 			<section>
 				<h3>Inheritance and Subclasses</h3>
-				<p>A class can be derived from another class</p>
-				<p>A class that is derived from another class is called a <em>subclass</em></p>
-				<p>Subclasses inherit fields and methods from their parent class</p>
+				<p>A class can be derived from another class.</p>
+				<p>A class that is derived from another class is called a <em>subclass</em>.</p>
+				<p>Subclasses inherit fields and methods from their parent class.</p>
 			</section>
 			<section>
 				<h3>Why would you want it?  Inheritance</h3>
-				<p>New class is created from an existing class</p>
-				<p>Reuse code</p>
-				<p>Can be used to create a hierarchical class structure</p>
+				<p>New class is created from an existing class.</p>
+				<p>Reuse code that's already been written.</p>
+				<p>Can be used to create a hierarchical class structure.</p>
 			</section>
 			<section>
 				<h3>MotorVehicle -> Car</h3>
@@ -636,16 +640,16 @@ public class Car extends MotorVehicle {
 			</section>
 			<section>
 				<h3>What you can do with a Subclass</h3>
-				<p>You can write a subclass constructor that invokes constructor of the superclass</p>
-				<p>You can declare new fields in subclass that aren't in the parent class</p>
-				<p>Inherited fields can be used directly</p>
-				<p>A subclass can't inherit private members</p>
+				<p>You can write a subclass constructor that invokes constructor of the superclass.</p>
+				<p>You can declare new fields in subclass that aren't in the parent class.</p>
+				<p>Inherited fields can be used directly.</p>
+				<p>A subclass can't inherit private members.</p>
 			</section>
 		</section>
 		<section>
 			<section>
 				<h3>Super</h3>
-				<p>The Super keyword can be used in a child to call a method or member of the parent class</p>
+				<p>The Super keyword can be used in a child to call a method or member of the parent class.</p>
 				<p>The syntax is super.methodName() or super.memberName;</p>
 				<p>If you want to call the constructor of the super class you simply use the syntax: </p>
 				<pre><code class='java'>
@@ -692,8 +696,8 @@ public class Car extends MotorVehicle {
 				</aside>
 				<h3>Code It!</h3>
 				<ol>
-					<li>Add a boolean called trunkOpen</li>
-					<li>Add an int called numDoors</li>
+					<li>Add a boolean called trunkOpen.</li>
+					<li>Add an int called numDoors.</li>
 				</ol>
 			</section>
 			<section>
@@ -718,8 +722,8 @@ public class Car extends MotorVehicle {
 					}
 				</aside>
 				<h3>Augment the constructor</h3>
-				<p>Our constructor should also be initialize the subclass-only data members</p>
-				<p>Initialize trunkOpen to false and numDoors to 4</p>
+				<p>Our constructor should also be initialize the subclass-only data members.</p>
+				<p>Initialize trunkOpen to false and numDoors to 4.</p>
 			</section>
 			<section>
 				<h3>The Code</h3>
@@ -746,15 +750,15 @@ public class Car extends MotorVehicle {
 					System.out.println("Number of Vehicles: "+MotorVehicle.getCountCreated());
 				</aside>
 				<h3>Test it Out</h3>
-				<p>In your HelloWorld class:</p>
+				<p>In your tester class:</p>
 				<ol>
-					<li>Create a car "myCar"</li>
-					<li>Turn the engineOn</li>
-					<li>Print the car's current speed</li>
-					<li>Accelerate the car</li>
-					<li>Print the car's new current speed</li>
-					<li>Call printDescription</li>
-					<li>Print the count of MotorVehicles on the road</li>
+					<li>Create a car "myCar".</li>
+					<li>Turn the engineOn.</li>
+					<li>Print the car's current speed.</li>
+					<li>Accelerate the car.</li>
+					<li>Print the car's new current speed.</li>
+					<li>Call printDescription.</li>
+					<li>Print the count of MotorVehicles on the road.</li>
 				</ol>
 			</section>
 			<section>
@@ -789,7 +793,7 @@ Number of Vehicles on the road: 3
 					<li>trunkOpen</li>
 					<li>numDoors</li>
 				</ol>
-				<p>Call the methods in the Tester</p>
+				<p>Call the methods in the tester.</p>
 			</section>
 			<section>
 				<h3>Code</h3>
@@ -821,8 +825,8 @@ System.out.println("the trunk is open: " + myCar.getTrunkOpen());
 			<section>
 				<h3>Code It</h3>
 				<ol>
-					<li>In the Tester, call the printDescription() method for your car</li>
-					<li>Run it</li>
+					<li>In the tester, call the printDescription() method for your car.</li>
+					<li>Run it.</li>
 					<li>Create a printDescription() method for your car class that says:<em>
 						I'm a car!  I have (#) doors!</em></li>
 				</ol>
@@ -843,39 +847,39 @@ I'm a car!  I have 4 doors!
 		<section>
 			<section>
 				<h3>Final Methods</h3>
-				<p>A Final method cannot be overridden in a subclass</p>
+				<p>A Final method cannot be overridden in a subclass.</p>
 			</section>
 			<section>
 				<h3>Test it</h3>
-				<p>Add the <em>final</em> keyword to the printDescription() method inside of the MotorVehicle class</p>
+				<p>Add the <em>final</em> keyword to the printDescription() method inside of the MotorVehicle class.</p>
 				<pre><code class='java'>
 public final void printDescription() {...}
 				</code></pre>
 				<p>The implication is that the subclass, Car, cannot override the printDescription()</p>
-				<p>Observe the compiler error</p>
+				<p>Observe the compiler error.</p>
 			</section>
 		</section>
 		<section>
 			<section>
 				<h3>A moment to ponder</h3>
-				<p>Right now we can accelerate and decelrate our car by the default value of "5"</p>
+				<p>Right now we can accelerate and decelrate our car by the default value of "5".</p>
 				<p>What if we wanted to really slam on the pedal and take a 10 mph jump? Or 20??</p>
-				<p>We can create another accelerate/decelerate method that will take a parameter specifying how much faster or slower we want to go</p>
+				<p>We can create another accelerate/decelerate method that will take a parameter specifying how much faster or slower we want to go.</p>
 			</section>
 			<section>
 				<h3>Method Overloading</h3>
-				<p>Doing so is called <em>Method Overloading</em></p>
+				<p>Doing so is called <em>Method Overloading</em>.</p>
 				<pre><code class='java'>
 public void accelerate(int amount) {
 	currentSpeed = currentSpeed + amount;
 }
 				</code></pre>
-				<p>Overloading is summed up by: Same name and different parameter list</p>
+				<p>Overloading is summed up by: Same name and different parameter list.</p>
 			</section>
 			<section>
 				<h3>An Error?</h3>
-				<p><em>The field MotorVehicle.currentSpeed is not visible</em></p>
-				<p>We've seen something like this before...it has to do with those access modifiers</p>
+				<p><em>The field MotorVehicle.currentSpeed is not visible.</em></p>
+				<p>We've seen something like this before...it has to do with those access modifiers.</p>
 			</section>
 		</section>
 		<section>
@@ -884,10 +888,10 @@ public void accelerate(int amount) {
 					Protected is also accessed by classes in the same package
 				</aside>
 				<h3>Fields</h3>
-				<p>Inherited Fields</p>
-				<p>A subclass can't access a parent's private members</p>
-				<p>There is a third access modifier called Protected</p>
-				<p>Protected fields can be accessed by subclasses</p>
+				<p>Inherited Fields.</p>
+				<p>A subclass can't access a parent's private members.</p>
+				<p>There is a third access modifier called Protected.</p>
+				<p>Protected fields can be accessed by subclasses.</p>
 			</section>
 			<section>
 				<h3>Quick Detour</h3>
@@ -900,7 +904,7 @@ System.out.println(myCar.getCurrentSpeed());
 			</section>
 			<section>
 				<h3><span class='individually'>Individually</span></h3>
-				<p>Overload the decelerate method in the same fashion</p>
+				<p>Overload the decelerate method in the same fashion.</p>
 			</section>
 			<section>
 				<h3>The Code</h3>
@@ -923,8 +927,8 @@ public void decelerate(int amount) {
 		<section>
 			<section>
 				<h3>Abstraction</h3>
-				<p>Using the <em>abstract</em> keyword when developing a class indicates that the class will never be instantiated</p>
-				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) could be instantiated</p>
+				<p>Using the <em>abstract</em> keyword when developing a class indicates that the class will never be instantiated.</p>
+				<p>However, other classes that extend (inherit) the abstract class (if not abstract themselves) could be instantiated.</p>
 			</section>
 			<section>
 				<aside class='notes'>
@@ -935,12 +939,12 @@ public void decelerate(int amount) {
 					But nothing that's just a generic MotorVehicle
 				</aside>
 				<h3>Building an Abstract Class</h3>
-				<p>Abstract classes can contain partial implementations</p>
+				<p>Abstract classes can contain partial implementations.</p>
 				<p>Will you ever have just a <em>MotorVehicle</em> on the road?</p>
 			</section>
 			<section>
 				<h3>Code It!</h3>
-				<p>Convert our MotorVehicle class to an Abstract Class</p>
+				<p>Convert our MotorVehicle class to an Abstract Class.</p>
 				<p>Add the <em>abstract</em> keyword to the class declaration:</p>
 				<pre><code class='java'>
 public abstract class MotorVehicle { ... }
@@ -951,8 +955,8 @@ public abstract class MotorVehicle { ... }
 				<p>Now that MotorVehicle is an abstract class, we can't create an instance of it</p>
 				<p>We have two choices:</p>
 				<ol>
-					<li>Comment out the code</li>
-					<li>Update the code to create instances of Cars</li>
+					<li>Comment out the code.</li>
+					<li>Update the code to create instances of Cars.</li>
 				</ol>
 			</section>
 			<section>
@@ -1003,8 +1007,8 @@ MotorVehicle myVehicle2 = new Car();
 				ALSO  -- how will other people interact with our class? An interface could tell them
 			</aside>
 			<h3>Interfaces</h3>
-			<p>If an abstract class only contains abstract method declarations, it is an interface</p>
-			<p>An <em>interface</em> tells people how to interact with an object</p>
+			<p>If an abstract class only contains abstract method declarations, it is an interface.</p>
+			<p>An <em>interface</em> tells people how to interact with an object.</p>
 			<p>What are the methods?  What are the parameters do they need and what do they return?</p>
 		</section>
 		<section>
