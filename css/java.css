@@ -3,3 +3,15 @@
 	content: '';
 
 }
+
+.hearts {
+	content: ' ';
+	height: 90px;
+	width: 90px;
+	display: block;
+	background-image: url('../images/flying_hearts.gif');
+	position: absolute;
+	top: -60px;
+	left: 765px;
+	background-size: 90px;
+}
